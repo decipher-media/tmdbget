@@ -146,6 +146,11 @@ def main
     raise
   end
 
+  if results.empty?
+    STDERR.puts 'Zero results returned.'
+    exit 3
+  end
+
   if interactive
     STDERR.puts 'Interactive mode selected. Showing top results...'
     STDERR.puts
