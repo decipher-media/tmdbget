@@ -3,7 +3,7 @@ tmdbget
 
 CLI tool to fetch movie/TV data for a single item from [TMDb](https://www.themoviedb.org/) and output to STDOUT in either JSON or YAML.
 
-<img src="tmdbget.png" width="400">
+<img src="logo.png" width="400">
 
 # Usage
 
