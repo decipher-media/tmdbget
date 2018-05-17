@@ -22,17 +22,7 @@ Would yield the result:
     "video": false,
     "vote_average": 7.4,
     "title": "The Terminator",
-    "popularity": 26.953661,
-    "poster_path": "/q8ffBuxQlYOHrvPniLgCbmKK4Lv.jpg",
-    "original_language": "en",
-    "original_title": "The Terminator",
-    "genre_ids": [
-      28,
-      53,
-      878
-    ],
-    "backdrop_path": "/6yFoLNQgFdVbA8TZMdfgVpszOla.jpg",
-    "adult": false,
+		[...]
     "overview": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safeguard Sarah. Can he stop the virtually indestructible killing machine?",
     "release_date": "1984-10-26",
     "release_year": "1984"
@@ -44,12 +34,14 @@ It is also possible to specify a year to narrow search, enable an interactive pr
 
 ```sh
 ./tmdbget.rb -h
-Fetch movie/TV data for a single item from TMDb and output to STDOUT in either JSON or YAML.
-Usage:  [options] <title>
+Fetch movie/TV data for a single item from TMDB and output to STDOUT in either JSON or YAML.
+Usage: tmdbget.rb [options] <title>
     -h, --h                          Display this help output
     -y, --year YEAR                  Year of release. This may do nothing for TV search.
         --yaml                       Output in YAML for easier human-reading.
-    -k, --key KEY                    TMDb API key or the path to a file containing such a key.
+    -a, --append x,y,z               Additional requests from within the same namespace (like credits, images, recommendations) to deliver along with the results. 
+See [https://developers.themoviedb.org/3/tv] and [https://developers.themoviedb.org/3/movies for a detailed list of options, or just specify "all".
+    -k, --key KEY                    TMDB API key or the path to a file containing such a key.
     -i, --interactive                Enable in order to present search results for selection on STDERR, eventually printing the final selection to STDOUT.
     -m, --maxshow MAXSHOW            Limit search results. By default, returns all.
         --nopretty                   Disable pretty-printing of JSON output.
