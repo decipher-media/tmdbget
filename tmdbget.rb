@@ -234,17 +234,14 @@ def main
   # Altering the final selection data structure
   # Add a new year-only date field
   selection['release_year'] = selection[date_field].split('-')[0]
-  tmdb_title = selection[title_field]
-  final_data = {}
-  final_data[tmdb_title] = selection
 
   if yaml
     require 'yaml'
-    puts YAML.dump(final_data)
+    puts YAML.dump(selection)
   elsif nopretty
-    puts JSON.generate(final_data)
+    puts JSON.generate(selection)
   else
-    puts JSON.pretty_generate(final_data)
+    puts JSON.pretty_generate(selection)
   end
 end
 
