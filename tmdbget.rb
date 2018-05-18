@@ -218,12 +218,16 @@ def main
       STDERR.puts "      \"#{trunc(data['overview'], 200)}\""
     end
     STDERR.puts
-    STDERR.print 'Select a title by [index]: '
-    sel_idx = STDIN.gets.chomp.to_i - 1
-    selection_id = results[sel_idx]['id']
+    sel_idx = -1
+    while !(0..results.size - 1).include?(sel_idx) do
+      # Loop until valid selection
+      STDERR.print 'Select a title by [index]: '
+      sel_idx = STDIN.gets.chomp.to_i - 1
+    end
   else
-    selection_id = results[0]['id']
+    sel_idx = 0
   end
+  selection_id = results[sel_idx]['id']
 
   # Get the final selection plus all specified subresources
   uri = "https://api.themoviedb.org/3/#{querytype}/#{selection_id}?"\
