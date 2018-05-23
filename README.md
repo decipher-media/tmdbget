@@ -81,8 +81,9 @@ Taking pull requests at [https://github.com/decipher-media/tmdbget.git](https://
 
 # Credits
 
-By Christopher Peterson - [website](https://chrispeterson.info) | [twitter](https://www.twitter.com/cspete)
-for Decipher Media | [website](https://deciphermedia.tv) | [github](https://github.com/decipher-media)
+By Christopher Peterson: [website](https://chrispeterson.info) | [twitter](https://www.twitter.com/cspete)
+
+for Decipher Media: [website](https://deciphermedia.tv) | [github](https://github.com/decipher-media)
 
 License
 -------
